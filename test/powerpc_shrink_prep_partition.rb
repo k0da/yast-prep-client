@@ -141,7 +141,7 @@ require 'ystorage/prep_shrink'
 
 Describe YStorage::PrepShrink do
   decribe "#run"
-     before :all do
+     before :each do
          Yast::Storage.stub(:GetTargetMap).and_return(data) 
       end
      it "shrink all prep partitions bigger then 8MB" do
